@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ControleDePontos</string>
+    <string name="txv_usuario">Usuário</string>
+    <string name="btn_entrar">ENTRAR</string>
+    <string name="txv_senha">Senha</string>
+    <string name="btn_cadastrar">Cadastrar</string>
 </resources>
