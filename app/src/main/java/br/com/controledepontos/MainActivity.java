@@ -14,6 +14,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button btnEntrar = findViewById(R.id.btnEntrar);
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abrirInicioActivity = new Intent(MainActivity.this, InicioActivity.class);
+                startActivity(abrirInicioActivity);
+            }
+        });
+
         Button btnCadastrar = findViewById(R.id.btnCadastrar);
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -17,7 +17,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingLeft="-10dp"
         android:text="@string/txv_cadastro"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"/>
 
     <EditText
         android:layout_width="350dp"
@@ -99,6 +99,6 @@
         android:layout_marginBottom="30dp"
         android:background="@drawable/botao_azul"
         android:text="@string/btn_cadastrar"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>
