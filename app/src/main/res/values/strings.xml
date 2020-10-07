@@ -4,4 +4,8 @@
     <string name="btn_entrar">ENTRAR</string>
     <string name="txv_senha">Senha</string>
     <string name="btn_cadastrar">Cadastrar</string>
+    <string name="txv_cadastro">CADASTRO</string>
+    <string name="txv_nome_completo">Nome Completo</string>
+    <string name="txv_email">E-mail</string>
+    <string name="txv_confirmacao_senha">Confirmação de Senha</string>
 </resources>

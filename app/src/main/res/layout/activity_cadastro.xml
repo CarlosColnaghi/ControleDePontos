@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroActivity">
+    <EditText
+        android:id="@+id/txvCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/fundo"
+        android:drawableLeft="@drawable/seta"
+        android:editable="false"
+        android:fontFamily="@font/montserrat"
+        android:paddingLeft="-10dp"
+        android:text="@string/txv_cadastro"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/fundo"
+        android:drawableLeft="@drawable/icone_usuario_azul"
+        android:drawablePadding="5dp"
+        android:hint="@string/txv_nome_completo"
+        android:shadowColor="@color/fundo"
+        android:singleLine="true"
+        android:textColor="@color/fundo"
+        android:textColorHint="@color/fundo"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/fundo"
+        android:drawableLeft="@drawable/icone_usuario_azul"
+        android:drawablePadding="5dp"
+        android:hint="@string/txv_usuario"
+        android:shadowColor="@color/fundo"
+        android:singleLine="true"
+        android:textColor="@color/fundo"
+        android:textColorHint="@color/fundo"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/fundo"
+        android:drawableLeft="@drawable/icone_email"
+        android:drawablePadding="5dp"
+        android:hint="@string/txv_email"
+        android:shadowColor="@color/fundo"
+        android:singleLine="true"
+        android:textColor="@color/fundo"
+        android:textColorHint="@color/fundo"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/fundo"
+        android:drawableLeft="@drawable/icone_senha_azul"
+        android:drawablePadding="5dp"
+        android:hint="@string/txv_senha"
+        android:shadowColor="@color/fundo"
+        android:singleLine="true"
+        android:textColor="@color/fundo"
+        android:textColorHint="@color/fundo"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/fundo"
+        android:drawableLeft="@drawable/icone_senha_azul"
+        android:drawablePadding="5dp"
+        android:hint="@string/txv_confirmacao_senha"
+        android:shadowColor="@color/fundo"
+        android:singleLine="true"
+        android:textColor="@color/fundo"
+        android:textColorHint="@color/fundo"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/botao_azul"
+        android:text="@string/btn_cadastrar"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
