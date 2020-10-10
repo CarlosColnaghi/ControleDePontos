@@ -12,4 +12,7 @@
     <string name="btn_registrar_ponto">REGISTRAR PONTO</string>
     <string name="btn_consulta_ponto">CONSULTA DE PONTO</string>
     <string name="btn_cadastro_cargo">CADASTRO DE CARGO</string>
+    <string name="txv_cadastro_cargo">CADASTRO DE CARGO</string>
+    <string name="txv_cargo">Cargo</string>
+    <string name="btn_excluir">EXCLUIR</string>
 </resources>

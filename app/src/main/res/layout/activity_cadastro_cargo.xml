@@ -5,61 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InicioActivity">
+    tools:context=".CadastroCargoActivity">
 
     <EditText
         android:id="@+id/txvCadastro"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="200dp"
         android:background="@color/fundo"
+        android:drawableLeft="@drawable/seta"
         android:editable="false"
         android:fontFamily="@font/montserrat"
-        android:paddingLeft="20dp"
-        android:text="@string/txv_inicio"
+        android:paddingLeft="-10dp"
+        android:text="@string/txv_cadastro_cargo"
         android:textColor="@android:color/white"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/user_picture"/>
-
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
         android:layout_gravity="center"
-        android:text="Bom dia, Anderson Kanegae!"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="@color/fundo"
+        android:drawableLeft="@drawable/icone_usuario_azul"
+        android:drawablePadding="5dp"
+        android:hint="@string/txv_cargo"
+        android:shadowColor="@color/fundo"
+        android:singleLine="true"
         android:textColor="@color/fundo"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textColorHint="@color/fundo"/>
 
     <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/botao_azul"
-        android:text="@string/btn_registrar_ponto"
-        android:textColor="@android:color/white"/>
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/botao_azul"
-        android:text="@string/btn_consulta_ponto"
-        android:textColor="@android:color/white"/>
-
-    <Button
-        android:id="@+id/btnCadastroCargo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"
         android:background="@drawable/botao_azul"
-        android:text="@string/btn_cadastro_cargo"
+        android:text="@string/btn_cadastrar"
         android:textColor="@android:color/white"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/botao_vermelho"
+        android:text="@string/btn_excluir"
+        android:textColor="@android:color/white"/>
+
 </LinearLayout>
