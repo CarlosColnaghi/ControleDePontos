@@ -15,7 +15,7 @@
         android:background="@color/fundo"
         android:drawableLeft="@drawable/seta"
         android:fontFamily="@font/montserrat"
-        android:textSize="20dp"
+        android:textSize="15sp"
         android:gravity="center_vertical"
         android:text="@string/txv_registro_ponto"
         android:textColor="@android:color/white"/>
