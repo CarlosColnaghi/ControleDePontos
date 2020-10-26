@@ -23,5 +23,15 @@ public class InicioActivity extends AppCompatActivity {
             }
         });
 
+        Button btnRegistroPonto = findViewById(R.id.btnRegistroPonto);
+        btnRegistroPonto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abrirRegistroPontoActivity = new Intent(InicioActivity.this, RegistroPontoActivity.class);
+                startActivity(abrirRegistroPontoActivity);
+            }
+        });
+
+
     }
 }

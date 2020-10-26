@@ -15,4 +15,6 @@
     <string name="txv_cadastro_cargo">CADASTRO DE CARGO</string>
     <string name="txv_cargo">Cargo</string>
     <string name="btn_excluir">EXCLUIR</string>
+    <string name="btn_registrar">REGISTRAR</string>
+    <string name="txv_registro_ponto">REGISTRO DE PONTO</string>
 </resources>
