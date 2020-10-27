@@ -7,18 +7,25 @@
     android:orientation="vertical"
     tools:context=".RegistroPontoActivity">
 
-    <TextView
-        android:id="@+id/txvCadastro"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="100dp"
-        android:background="@color/fundo"
-        android:drawableLeft="@drawable/seta"
-        android:fontFamily="@font/montserrat"
-        android:textSize="15sp"
-        android:gravity="center_vertical"
-        android:text="@string/txv_registro_ponto"
-        android:textColor="@android:color/white"/>
+        android:background="@color/fundo">
+        <ImageView
+            android:id="@+id/imgVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/seta"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="@string/txv_registro_ponto"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
 
     <ImageView
         android:layout_width="50dp"
