@@ -32,6 +32,15 @@ public class InicioActivity extends AppCompatActivity {
             }
         });
 
+        Button btnConsultaPonto = findViewById(R.id.btnConsultaPonto);
+        btnConsultaPonto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent abrirConsultaPontoActivity = new Intent(InicioActivity.this, ConsultaPontoActivity.class);
+                startActivity(abrirConsultaPontoActivity);
+            }
+        });
+
 
     }
 }

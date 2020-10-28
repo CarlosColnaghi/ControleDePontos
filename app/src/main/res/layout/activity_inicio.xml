@@ -47,6 +47,7 @@
         android:textColor="@android:color/white"/>
 
     <Button
+        android:id="@+id/btnConsultaPonto"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
