@@ -17,4 +17,9 @@
     <string name="btn_excluir">EXCLUIR</string>
     <string name="btn_registrar">REGISTRAR</string>
     <string name="txv_registro_ponto">REGISTRO DE PONTO</string>
+    <string name="txv_consulta_ponto">CONSULTA DE PONTO</string>
+    <string name="txv_data">Data</string>
+    <string name="txv_entrada">Entrada</string>
+    <string name="txv_saida">Saída</string>
+    <string name="txv_horas_extras">Horas Extras</string>
 </resources>

@@ -22,10 +22,10 @@ public class ConsultaPontoActivity extends AppCompatActivity {
         ListView lista = findViewById(R.id.ltvLista);
         ArrayList<HashMap<String, String>> dados = new ArrayList<HashMap<String,String>>();
         HashMap<String,String> hashmap = new HashMap<String, String>();
-        hashmap.put(FIRST_COLUMN, "Allo messaging");
-        hashmap.put(SECOND_COLUMN, "google");
-        hashmap.put(THIRD_COLUMN, "Free");
-        hashmap.put(FOURTH_COLUMN, "App");
+        hashmap.put(FIRST_COLUMN, "20/09/2020");
+        hashmap.put(SECOND_COLUMN, "09:00");
+        hashmap.put(THIRD_COLUMN, "19:00");
+        hashmap.put(FOURTH_COLUMN, "01:00");
         dados.add(hashmap);
         AdaptadorLista adaptador = new AdaptadorLista(this, dados);
 
