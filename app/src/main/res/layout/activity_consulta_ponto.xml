@@ -26,12 +26,13 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@drawable/borda_cabecalho_lista">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:gravity="center"
             android:text="@string/txv_data"
             android:textColor="@color/fundo"
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:gravity="center"
             android:text="@string/txv_entrada"
             android:textColor="@color/fundo"
@@ -49,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:gravity="center"
             android:text="@string/txv_saida"
             android:textColor="@color/fundo"
@@ -58,11 +59,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:gravity="center"
             android:text="@string/txv_horas_extras"
             android:textColor="@color/fundo"
-            android:layout_weight="1"/>
+            android:layout_weight="0.2"/>
     </LinearLayout>
     <ListView
         android:layout_width="match_parent"

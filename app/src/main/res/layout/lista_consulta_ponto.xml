@@ -2,14 +2,14 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="25dp"
-    android:stretchColumns="*">
+    >
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="match_parent">
 
         <TextView
+            android:layout_weight="0.4"
             android:id="@+id/primeiraColuna"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -20,6 +20,7 @@
             android:text="20/09/2020" />
 
         <TextView
+            android:layout_weight="1"
             android:id="@+id/segundaColuna"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -30,6 +31,7 @@
             android:text="09:00" />
 
         <TextView
+            android:layout_weight="1"
             android:id="@+id/terceiraColuna"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -40,6 +42,7 @@
             android:text="19:00" />
 
         <TextView
+            android:layout_weight="1"
             android:id="@+id/quartaColuna"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
