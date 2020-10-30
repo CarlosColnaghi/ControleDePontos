@@ -22,4 +22,5 @@
     <string name="txv_entrada">Entrada</string>
     <string name="txv_saida">Saída</string>
     <string name="txv_horas_extras">Horas Extras</string>
+    <string name="txv_perfil">PERFIL</string>
 </resources>

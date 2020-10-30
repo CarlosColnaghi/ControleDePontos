@@ -21,7 +21,7 @@
         android:textColor="@android:color/white"/>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgUsuario"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:srcCompat="@drawable/user_picture"/>

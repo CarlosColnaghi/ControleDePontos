@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/fundo"
+        android:layout_marginBottom="50dp">
+        <ImageView
+            android:id="@+id/imgVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/seta"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:text="@string/txv_perfil"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/user_picture"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:textSize="25sp"
+        android:text="ANDERSON KANEGAE"
+        android:textStyle="bold"
+        android:textColor="@color/fundo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:textSize="13sp"
+        android:text="Desenvolvedor Java Sênior"
+        android:textColor="@color/fundo"
+        android:layout_marginBottom="30dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/borda_caixa"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="12sp"
+                android:text="anderson.kanegae@unisalesiano.com.br"
+                android:textColor="@color/fundo"
+                android:drawableLeft="@drawable/icone_email"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="12sp"
+            android:text="09:00 - 12/13:00 - 18:00"
+            android:textColor="@color/fundo"
+            android:drawableLeft="@drawable/icone_relogio_azul"
+            android:drawablePadding="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/white"
+            android:fontFamily="@font/montserrat"
+            android:text="INFORMAÇÕES PESSOAIS"
+            android:textColor="@color/fundo"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/borda_caixa"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <com.github.mikephil.charting.charts.HorizontalBarChart
+                android:id="@+id/barGrafico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HORAS"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/fundo"
+            android:background="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>
