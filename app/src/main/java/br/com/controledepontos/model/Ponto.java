@@ -6,13 +6,13 @@ import java.sql.Time;
 public class Ponto {
     private Integer ponto;
     private Date data;
-    private Time horiario;
+    private Time horario;
     private Situacao situacao;
 
-    public Ponto(Integer ponto, Date data, Time horiario, Situacao situacao) {
+    public Ponto(Integer ponto, Date data, Time horario, Situacao situacao) {
         this.ponto = ponto;
         this.data = data;
-        this.horiario = horiario;
+        this.horario = horario;
         this.situacao = situacao;
     }
 
@@ -32,12 +32,12 @@ public class Ponto {
         this.data = data;
     }
 
-    public Time getHoriario() {
-        return horiario;
+    public Time gethorario() {
+        return horario;
     }
 
-    public void setHoriario(Time horiario) {
-        this.horiario = horiario;
+    public void sethorario(Time horario) {
+        this.horario = horario;
     }
 
     public Situacao getSituacao() {
