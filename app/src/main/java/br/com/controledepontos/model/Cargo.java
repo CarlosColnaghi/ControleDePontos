@@ -1,6 +1,8 @@
 package br.com.controledepontos.model;
 
-public class Cargo {
+import java.io.Serializable;
+
+public class Cargo implements Serializable {
     private Integer codigo;
     private String nome;
     private Turno turno;

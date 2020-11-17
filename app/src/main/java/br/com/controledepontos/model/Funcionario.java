@@ -1,6 +1,8 @@
 package br.com.controledepontos.model;
 
-public class Funcionario {
+import java.io.Serializable;
+
+public class Funcionario implements Serializable {
     private Integer codigo;
     private String usuario;
     private String senha;

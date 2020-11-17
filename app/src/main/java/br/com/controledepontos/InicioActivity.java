@@ -4,9 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import br.com.controledepontos.model.Cargo;
+import br.com.controledepontos.model.Funcionario;
+
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -51,6 +61,26 @@ public class InicioActivity extends AppCompatActivity {
             }
         });
 
-
+        TextView txvSaudacao = findViewById(R.id.txvSaudacao);
+        String saudacao = "Bom dia";
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+            Date hora = dateFormat.parse(dateFormat.format(new Date()));
+            if(hora.after(dateFormat.parse("05:00")) && hora.before(dateFormat.parse("12:00"))){
+                saudacao = "Bom dia";
+            }else if(hora.after(dateFormat.parse("12:00")) && hora.before(dateFormat.parse("18:00"))) {
+                saudacao = "Boa tarde";
+            }else if(hora.after(dateFormat.parse("18:00"))){
+                saudacao = "Boa noite";
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        Intent intent = getIntent();
+        if(intent.hasExtra("funcionario")){
+            Funcionario funcionario = (Funcionario) intent.getSerializableExtra("funcionario");
+            saudacao += ", " + funcionario.getNome();
+        }
+        txvSaudacao.setText(saudacao);
     }
 }

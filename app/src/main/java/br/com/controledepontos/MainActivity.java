@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import br.com.controledepontos.dao.FuncionarioDAO;
+import br.com.controledepontos.model.Cargo;
 import br.com.controledepontos.model.Funcionario;
+import br.com.controledepontos.model.Turno;
 
 public class MainActivity extends AppCompatActivity {
     private EditText edtUsuarioLogin;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     Funcionario funcionario = new FuncionarioDAO(MainActivity.this).login(edtUsuarioLogin.getText().toString(), edtSenhaLogin.getText().toString());
                     if(funcionario != null){
                         Intent abrirInicioActivity = new Intent(MainActivity.this, InicioActivity.class);
+                        abrirInicioActivity.putExtra("funcionario", funcionario);
                         startActivity(abrirInicioActivity);
                         edtUsuarioLogin.setText(null);
                         edtSenhaLogin.setText(null);

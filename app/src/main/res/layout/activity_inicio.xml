@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InicioActivity">
+    tools:context=".InicioActivity"
+    android:focusable="true">
 
     <TextView
         android:id="@+id/txvCadastro"
@@ -27,6 +28,7 @@
         app:srcCompat="@drawable/user_picture"/>
 
     <TextView
+        android:id="@+id/txvSaudacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
