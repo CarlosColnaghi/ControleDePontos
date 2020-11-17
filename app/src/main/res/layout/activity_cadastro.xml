@@ -70,8 +70,7 @@
         android:shadowColor="@color/fundo"
         android:singleLine="true"
         android:textColor="@color/fundo"
-        android:textColorHint="@color/fundo"
-        android:inputType="textPassword"/>
+        android:textColorHint="@color/fundo"/>
 
     <EditText
         android:id="@+id/edtSenha"
