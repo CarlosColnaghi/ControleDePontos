@@ -16,9 +16,8 @@ public class CargoDAO {
         sqLiteDatabase = controlePontoHelper.getWritableDatabase();
     }
 
-    public static void inserir(Cargo cargo){
+    public void inserir(Cargo cargo){
         ContentValues contentValues = new ContentValues();
-        contentValues.put(CargoEntry._ID, cargo.getCodigo());
         contentValues.put(CargoEntry.COLUNA_NOME, cargo.getNome());
         contentValues.put(CargoEntry.COLUNA_TURNO, cargo.getTurno().toString());
         sqLiteDatabase.insert(CargoEntry.TABELA_NOME, null, contentValues);

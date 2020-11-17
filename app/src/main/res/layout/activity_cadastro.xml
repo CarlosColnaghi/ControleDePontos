@@ -28,6 +28,7 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/edtNomeCompleto"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -42,6 +43,7 @@
         android:textColorHint="@color/fundo"/>
 
     <EditText
+        android:id="@+id/edtUsuario"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -56,6 +58,7 @@
         android:textColorHint="@color/fundo"/>
 
     <EditText
+        android:id="@+id/edtEmail"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -71,6 +74,7 @@
         android:inputType="textPassword"/>
 
     <EditText
+        android:id="@+id/edtSenha"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -86,6 +90,7 @@
         android:inputType="textPassword"/>
 
     <EditText
+        android:id="@+id/edtConfimacaoSenha"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -101,6 +106,7 @@
         android:inputType="textPassword"/>
 
     <Button
+        android:id="@+id/btnCadastrarUsuario"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
