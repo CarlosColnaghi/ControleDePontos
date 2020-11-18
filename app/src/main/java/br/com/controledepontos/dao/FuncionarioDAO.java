@@ -39,7 +39,6 @@ public class FuncionarioDAO {
         if(cursor.getCount() > 0){
             cursor.moveToFirst();
             funcionario = new Funcionario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), new Cargo(1, "Cargo", Turno.MANHA));
-            //funcionario = new Funcionario(1, "a", "s", "e", "n", new Cargo(1, "Cargo", Turno.MANHA));
         }
         return funcionario;
     }

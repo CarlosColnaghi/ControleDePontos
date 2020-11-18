@@ -30,6 +30,7 @@
 
 
     <EditText
+        android:id="@+id/edtCargo"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -44,6 +45,7 @@
         android:textColorHint="@color/fundo"/>
 
     <Button
+        android:id="@+id/btnCadastrarCargo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -53,6 +55,7 @@
         android:textColor="@android:color/white"/>
 
     <Button
+        android:id="@+id/btnExcluirCargo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
