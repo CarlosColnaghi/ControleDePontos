@@ -25,11 +25,20 @@ public class InicioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
+        final Funcionario funcionario;
+        Intent intent = getIntent();
+        if(intent.hasExtra("funcionario")){
+            funcionario = (Funcionario) intent.getSerializableExtra("funcionario");
+        }else{
+            funcionario = null;
+        }
+
         ImageView imgUsuario = findViewById(R.id.imgUsuario);
         imgUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent abrirPerfilActivity = new Intent(InicioActivity.this, PerfilActivity.class);
+                abrirPerfilActivity.putExtra("funcionario", funcionario);
                 startActivity(abrirPerfilActivity);
             }
         });
@@ -39,6 +48,7 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent abrirCadastroCargoActivity = new Intent(InicioActivity.this, CadastroCargoActivity.class);
+                abrirCadastroCargoActivity.putExtra("funcionario", funcionario);
                 startActivity(abrirCadastroCargoActivity);
             }
         });
@@ -48,6 +58,7 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent abrirRegistroPontoActivity = new Intent(InicioActivity.this, RegistroPontoActivity.class);
+                abrirRegistroPontoActivity.putExtra("funcionario", funcionario);
                 startActivity(abrirRegistroPontoActivity);
             }
         });
@@ -57,6 +68,7 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent abrirConsultaPontoActivity = new Intent(InicioActivity.this, ConsultaPontoActivity.class);
+                abrirConsultaPontoActivity.putExtra("funcionario", funcionario);
                 startActivity(abrirConsultaPontoActivity);
             }
         });
@@ -76,9 +88,7 @@ public class InicioActivity extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
-        Intent intent = getIntent();
-        if(intent.hasExtra("funcionario")){
-            Funcionario funcionario = (Funcionario) intent.getSerializableExtra("funcionario");
+        if (funcionario != null){
             saudacao += ", " + funcionario.getNome();
         }
         txvSaudacao.setText(saudacao);

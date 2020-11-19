@@ -1,19 +1,18 @@
 package br.com.controledepontos.model;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 
 public class Ponto {
     private Integer codigo;
-    private Date data;
-    private Time horario;
+    private Date dataHora;
     private Situacao situacao;
+    private Funcionario funcionario;
 
-    public Ponto(Integer codigo, Date data, Time horario, Situacao situacao) {
+    public Ponto(Integer codigo, Date dataHora, Situacao situacao, Funcionario funcionario) {
         this.codigo = codigo;
-        this.data = data;
-        this.horario = horario;
+        this.dataHora = dataHora;
         this.situacao = situacao;
+        this.funcionario = funcionario;
     }
 
     public Integer getCodigo() {
@@ -24,20 +23,12 @@ public class Ponto {
         this.codigo = codigo;
     }
 
-    public Date getData() {
-        return data;
+    public Date getDataHora() {
+        return dataHora;
     }
 
-    public void setData(Date data) {
-        this.data = data;
-    }
-
-    public Time getHorario() {
-        return horario;
-    }
-
-    public void setHorario(Time horario) {
-        this.horario = horario;
+    public void setData(Date dataHora) {
+        this.dataHora = dataHora;
     }
 
     public Situacao getSituacao() {
@@ -46,5 +37,13 @@ public class Ponto {
 
     public void setSituacao(Situacao situacao) {
         this.situacao = situacao;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
 }
