@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textColor="@color/fundo"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/robotomono"
             android:background="@drawable/borda_lista"
             android:text="20/09/2020" />
 
@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textColor="@color/fundo"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/robotomono"
             android:background="@drawable/borda_lista"
             android:text="09:00" />
 
@@ -37,7 +37,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textColor="@color/fundo"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/robotomono"
             android:background="@drawable/borda_lista"
             android:text="19:00" />
 
@@ -48,7 +48,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textColor="@color/fundo"
-            android:fontFamily="@font/montserrat"
+            android:fontFamily="@font/robotomono"
             android:text="01:00" />
     </TableRow>
 </TableLayout>
