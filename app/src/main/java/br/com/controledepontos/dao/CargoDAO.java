@@ -30,6 +30,32 @@ public class CargoDAO {
         sqLiteDatabase.insert(CargoEntry.TABELA_NOME, null, contentValues);
     }
 
+    public List<Cargo> pesquisar(){
+        List<Cargo> cargos = new ArrayList<>();
+        String[] colunas = {CargoEntry._ID, CargoEntry.COLUNA_NOME, CargoEntry.COLUNA_TURNO};
+        Cursor cursor = sqLiteDatabase.query(CargoEntry.TABELA_NOME, colunas, null, null, null, null, null);
+        if(cursor.getCount() > 0){
+            cursor.moveToFirst();
+            do{
+                cargos.add(new Cargo(cursor.getInt(0), cursor.getString(1), Turno.valueOf(cursor.getString(2))));
+            }while(cursor.moveToNext());
+        }
+        return cargos;
+    }
+
+    public Cargo pesquisar(Integer codigo){
+        Cargo cargo = null;
+        String[] colunas = {CargoEntry._ID, CargoEntry.COLUNA_NOME, CargoEntry.COLUNA_TURNO};
+        String condicoes = CargoEntry._ID + " = ?";
+        String[] parametros = {codigo.toString()};
+        Cursor cursor = sqLiteDatabase.query(CargoEntry.TABELA_NOME, colunas, condicoes, parametros, null, null, null);
+        if(cursor.getCount() > 0){
+            cursor.moveToFirst();
+            cargo = new Cargo(cursor.getInt(0), cursor.getString(1), Turno.valueOf(cursor.getString(2)));
+        }
+        return cargo;
+    }
+
     public List<Cargo> pesquisar(String nome){
         List<Cargo> cargos = new ArrayList<>();
         String[] colunas = {CargoEntry._ID, CargoEntry.COLUNA_NOME, CargoEntry.COLUNA_TURNO};

@@ -2,9 +2,12 @@ package br.com.controledepontos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -16,12 +19,30 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import br.com.controledepontos.model.Funcionario;
+
 public class PerfilActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
+        final Funcionario funcionario;
+        Intent intent = getIntent();
+        if(intent.hasExtra("funcionario")){
+            funcionario = (Funcionario) intent.getSerializableExtra("funcionario");
+        }else{
+            funcionario = null;
+        }
+
+        TextView txvUsuarioPerfil = findViewById(R.id.txvUsuarioPerfil);
+        TextView txvCargoPerfil = findViewById(R.id.txvCargoPerfil);
+        TextView txvEmailPerfil = findViewById(R.id.txvEmailPerfil);
+
+        txvUsuarioPerfil.setText(funcionario.getNome().toUpperCase());
+        txvCargoPerfil.setText(funcionario.getCargo().getNome());
+        txvEmailPerfil.setText(funcionario.getEmail());
 
         ImageView imgVoltar = findViewById(R.id.imgVoltar);
         imgVoltar.setOnClickListener(new View.OnClickListener() {

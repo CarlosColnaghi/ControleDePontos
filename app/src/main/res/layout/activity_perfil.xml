@@ -29,6 +29,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="30dp"/>
     <TextView
+        android:id="@+id/txvUsuarioPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -38,6 +39,7 @@
         android:textStyle="bold"
         android:textColor="@color/fundo"/>
     <TextView
+        android:id="@+id/txvCargoPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -61,6 +63,7 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/txvEmailPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat"

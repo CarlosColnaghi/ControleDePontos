@@ -93,7 +93,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="@color/fundo"
         android:drawableLeft="@drawable/icone_senha_azul"
         android:drawablePadding="5dp"
@@ -103,6 +103,16 @@
         android:textColor="@color/fundo"
         android:textColorHint="@color/fundo"
         android:inputType="textPassword"/>
+
+    <Spinner
+        android:id="@+id/spnCargo"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:textColor="@color/fundo"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        app:backgroundTint="@color/fundo"/>
 
     <Button
         android:id="@+id/btnCadastrarUsuario"

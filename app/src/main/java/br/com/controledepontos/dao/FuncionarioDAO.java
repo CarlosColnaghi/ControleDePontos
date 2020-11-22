@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import br.com.controledepontos.data.ControlePontoHelper;
 import br.com.controledepontos.data.ControlePontoContract.FuncionarioEntry;
@@ -38,7 +39,7 @@ public class FuncionarioDAO {
         Cursor cursor = sqLiteDatabase.query(FuncionarioEntry.TABELA_NOME, colunas, condicoes, parametros, null, null, null);
         if(cursor.getCount() > 0){
             cursor.moveToFirst();
-            funcionario = new Funcionario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), new Cargo(1, "Cargo", Turno.MANHA));
+            funcionario = new Funcionario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), new Cargo(cursor.getInt(5), null, null));
         }
         return funcionario;
     }

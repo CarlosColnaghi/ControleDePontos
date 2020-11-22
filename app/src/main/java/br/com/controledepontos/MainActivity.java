@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.com.controledepontos.dao.CargoDAO;
 import br.com.controledepontos.dao.FuncionarioDAO;
 import br.com.controledepontos.model.Cargo;
 import br.com.controledepontos.model.Funcionario;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 if (validar()){
                     Funcionario funcionario = new FuncionarioDAO(MainActivity.this).login(edtUsuarioLogin.getText().toString(), edtSenhaLogin.getText().toString());
                     if(funcionario != null){
+                        funcionario.setCargo(new CargoDAO(MainActivity.this).pesquisar(funcionario.getCargo().getCodigo()));
                         Intent abrirInicioActivity = new Intent(MainActivity.this, InicioActivity.class);
                         abrirInicioActivity.putExtra("funcionario", funcionario);
                         startActivity(abrirInicioActivity);

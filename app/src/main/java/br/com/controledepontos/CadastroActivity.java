@@ -6,13 +6,19 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.controledepontos.dao.CargoDAO;
 import br.com.controledepontos.dao.FuncionarioDAO;
+import br.com.controledepontos.data.ControlePontoContract;
 import br.com.controledepontos.model.Cargo;
 import br.com.controledepontos.model.Funcionario;
 import br.com.controledepontos.model.Turno;
@@ -23,6 +29,8 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText edtEmail;
     private EditText edtSenha;
     private EditText edtConfimacaoSenha;
+    private Spinner spnCargo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +43,16 @@ public class CadastroActivity extends AppCompatActivity {
             }
         });
 
+        List<Cargo> cargos = new CargoDAO(CadastroActivity.this).pesquisar();
+        List<String> nomeCargos = new ArrayList<>();
+        for(Cargo cargo : cargos){
+            nomeCargos.add(cargo.getNome());
+        }
+        spnCargo = findViewById(R.id.spnCargo);
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(CadastroActivity.this, android.R.layout.simple_spinner_item, nomeCargos);
+        adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnCargo.setAdapter(adaptador);
+
         edtNomeCompleto = findViewById(R.id.edtNomeCompleto);
         edtUsuario = findViewById(R.id.edtUsuario);
         edtEmail = findViewById(R.id.edtEmail);
@@ -46,7 +64,12 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(validar()){
-                    Cargo cargo = new Cargo(1, "Cargo", Turno.MANHA);
+                    Cargo cargo = null;
+                    if (spnCargo.getSelectedItem() == null){
+                        cargo = new Cargo(1, null, null);
+                    }else{
+                        cargo = new CargoDAO(CadastroActivity.this).pesquisar(spnCargo.getSelectedItem().toString()).get(0);
+                    }
                     Funcionario funcionario = new Funcionario(null, edtUsuario.getText().toString(), edtSenha.getText().toString(), edtEmail.getText().toString(), edtNomeCompleto.getText().toString(), cargo);
                     new FuncionarioDAO(CadastroActivity.this).inserir(funcionario);
                     Toast.makeText(CadastroActivity.this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show();
