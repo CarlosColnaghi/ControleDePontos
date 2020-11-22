@@ -10,15 +10,18 @@ import br.com.controledepontos.data.ControlePontoHelper;
 import br.com.controledepontos.data.ControlePontoContract.FuncionarioEntry;
 import br.com.controledepontos.model.Cargo;
 import br.com.controledepontos.model.Funcionario;
+import br.com.controledepontos.model.Ponto;
 import br.com.controledepontos.model.Turno;
 
 public class FuncionarioDAO {
 
-    private static SQLiteDatabase sqLiteDatabase;
+    private SQLiteDatabase sqLiteDatabase;
+    private Context context;
 
     public FuncionarioDAO(Context context){
         ControlePontoHelper controlePontoHelper = new ControlePontoHelper(context);
         sqLiteDatabase = controlePontoHelper.getWritableDatabase();
+        this.context = context;
     }
 
     public void inserir(Funcionario funcionario){
@@ -39,7 +42,8 @@ public class FuncionarioDAO {
         Cursor cursor = sqLiteDatabase.query(FuncionarioEntry.TABELA_NOME, colunas, condicoes, parametros, null, null, null);
         if(cursor.getCount() > 0){
             cursor.moveToFirst();
-            funcionario = new Funcionario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), new Cargo(cursor.getInt(5), null, null));
+            Cargo cargo = new CargoDAO(context).pesquisar(cursor.getInt(5));
+            funcionario = new Funcionario(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cargo);
         }
         return funcionario;
     }

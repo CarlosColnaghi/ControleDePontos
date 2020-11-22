@@ -16,7 +16,7 @@ import br.com.controledepontos.model.Funcionario;
 import br.com.controledepontos.model.Turno;
 
 public class CargoDAO {
-    private static SQLiteDatabase sqLiteDatabase;
+    private SQLiteDatabase sqLiteDatabase;
 
     public CargoDAO(Context context){
         ControlePontoHelper controlePontoHelper = new ControlePontoHelper(context);

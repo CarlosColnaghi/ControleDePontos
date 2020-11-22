@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 if (validar()){
                     Funcionario funcionario = new FuncionarioDAO(MainActivity.this).login(edtUsuarioLogin.getText().toString(), edtSenhaLogin.getText().toString());
                     if(funcionario != null){
-                        funcionario.setCargo(new CargoDAO(MainActivity.this).pesquisar(funcionario.getCargo().getCodigo()));
                         Intent abrirInicioActivity = new Intent(MainActivity.this, InicioActivity.class);
                         abrirInicioActivity.putExtra("funcionario", funcionario);
                         startActivity(abrirInicioActivity);
