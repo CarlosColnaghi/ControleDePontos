@@ -72,7 +72,7 @@ public class PontoDAO {
             cursor.moveToFirst();
             return Situacao.valueOf(cursor.getString(3));
         }
-        return Situacao.ENTRADA;
+        return Situacao.SAIDA;
     }
 
 

@@ -50,10 +50,10 @@ public class RegistroPontoActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Situacao situacao = new PontoDAO(RegistroPontoActivity.this).pesquisarSituacao(funcionario.getCodigo());
-                if (situacao.equals(Situacao.ENTRADA)){
-                    situacao = situacao.SAIDA;
-                }else{
+                if (situacao.equals(Situacao.SAIDA)){
                     situacao = situacao.ENTRADA;
+                }else{
+                    situacao = situacao.SAIDA;
                 }
                 new PontoDAO(RegistroPontoActivity.this).inserir(new Ponto(null, new Date(), situacao, funcionario));
                 SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy");
