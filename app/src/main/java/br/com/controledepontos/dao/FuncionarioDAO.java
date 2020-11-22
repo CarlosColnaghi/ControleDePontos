@@ -6,6 +6,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 import br.com.controledepontos.data.ControlePontoHelper;
 import br.com.controledepontos.data.ControlePontoContract.FuncionarioEntry;
 import br.com.controledepontos.model.Cargo;
@@ -48,4 +53,21 @@ public class FuncionarioDAO {
         return funcionario;
     }
 
+    public double calcularHoras(Integer codigo) throws ParseException {
+        List<Ponto> pontos = new PontoDAO(context).pesquisar(codigo);
+        double hora = 0;
+        for(int i = 0; ((i+1) < pontos.size()); i+=2){
+            Date horaEntrada = pontos.get(i).getDataHora();
+            Date horaSaida = pontos.get(i+1).getDataHora();
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(horaEntrada);
+            double hora1 = calendar.get(Calendar.HOUR) + (calendar.get(Calendar.MINUTE)/60.0);
+            calendar.setTime(horaSaida);
+            double hora2 = calendar.get(Calendar.HOUR) + (calendar.get(Calendar.MINUTE)/60.0);
+            hora += (hora2-hora1);
+        }
+        Log.i("info", String.valueOf(hora));
+        return hora;
+    }
 }
